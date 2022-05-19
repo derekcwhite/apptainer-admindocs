@@ -709,7 +709,7 @@ filesystem and by checking against a list of signing entities.
 
    [[execgroup]]
      tagname = "group2"
-     mode = "whitelist"
+     mode = "allowlist"
      dirpath = "/tmp/containers"
      keyfp = ["7064B1D6EFF01B1262FED3F03581D99FE87EAFD1"]
 
@@ -718,12 +718,12 @@ and keys will be authorized to run.
 
 Three possible list modes you can choose from:
 
-**Whitestrict**: The SIF must be signed by all of the keys mentioned.
+**allowstrict**: The SIF must be signed by all of the keys mentioned.
 
-**Whitelist**: As long as the SIF is signed by one or more of the keys,
+**allowlist**: As long as the SIF is signed by one or more of the keys,
 the container is allowed to run.
 
-**Blacklist**: Only the containers whose keys are not mentioned in the
+**denylist**: Only the containers whose keys are not mentioned in the
 group are allowed to run.
 
 .. note::
